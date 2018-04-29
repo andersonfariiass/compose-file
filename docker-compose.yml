@@ -7,8 +7,8 @@ version: '3'
 
 services:
 
-  apache-local: #Nome do serviço
-    image: ambientum/php:7.0-apache #imagem utilizada
+  apache-local:
+    image: ambientum/php:7.0-apache
     container_name: apache-local 
     volumes:
       - ./www/html:/var/www/app/public
@@ -31,3 +31,4 @@ services:
       - MYSQL_DATABASE=projeto_docker
       - MYSQL_USER=docker
       - MYSQL_PASSWORD=docker
+    user: "1000:50"  
